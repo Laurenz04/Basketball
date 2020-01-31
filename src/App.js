@@ -3,12 +3,18 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Results from './lateResults.js'
+import NestedGrid from './Grid.js'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   }
 }));
+
+
+
 
 export default function SearchAppBar() {
   const classes = useStyles();
@@ -22,6 +28,9 @@ export default function SearchAppBar() {
           </Typography>
         </Toolbar>
       </AppBar>
+
+      <NestedGrid />
     </div>
   );
 }
+
