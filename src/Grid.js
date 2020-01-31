@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function FullWidthGrid() {
+export default function () {
   const classes = useStyles();
 
   return (
@@ -97,7 +97,6 @@ export default function FullWidthGrid() {
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper}>{fakeData.name19} {fakeData.score19}-{fakeData.score20} {fakeData.name20}</Paper>
         </Grid>
-
       </Grid>
     </div>
   );
