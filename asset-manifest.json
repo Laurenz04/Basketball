@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Basketball/static/css/main.a722dd24.chunk.css",
+    "main.js": "/Basketball/static/js/main.c3a6bbef.chunk.js",
+    "main.js.map": "/Basketball/static/js/main.c3a6bbef.chunk.js.map",
+    "runtime-main.js": "/Basketball/static/js/runtime-main.83fd6e68.js",
+    "runtime-main.js.map": "/Basketball/static/js/runtime-main.83fd6e68.js.map",
+    "static/js/2.76e5c2a1.chunk.js": "/Basketball/static/js/2.76e5c2a1.chunk.js",
+    "static/js/2.76e5c2a1.chunk.js.map": "/Basketball/static/js/2.76e5c2a1.chunk.js.map",
+    "index.html": "/Basketball/index.html",
+    "precache-manifest.d73b1fb911b4b536442c563671dd9a37.js": "/Basketball/precache-manifest.d73b1fb911b4b536442c563671dd9a37.js",
+    "service-worker.js": "/Basketball/service-worker.js",
+    "static/css/main.a722dd24.chunk.css.map": "/Basketball/static/css/main.a722dd24.chunk.css.map",
+    "static/js/2.76e5c2a1.chunk.js.LICENSE": "/Basketball/static/js/2.76e5c2a1.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83fd6e68.js",
+    "static/js/2.76e5c2a1.chunk.js",
+    "static/css/main.a722dd24.chunk.css",
+    "static/js/main.c3a6bbef.chunk.js"
+  ]
+}
