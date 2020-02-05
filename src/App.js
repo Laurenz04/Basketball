@@ -4,19 +4,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Results from './lateResults.js'
-import NestedGrid from './Grid.js'
-
+import Games from './Games.js'
+import ComplexGrid from './ComplexGrid.js'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    
   }
 }));
 
-
-
-
-export default function SearchAppBar() {
+export default function App() {
   const classes = useStyles();
 
   return (
@@ -29,7 +26,8 @@ export default function SearchAppBar() {
         </Toolbar>
       </AppBar>
 
-      <NestedGrid />
+      <Games />
+      <ComplexGrid />
     </div>
   );
 }
