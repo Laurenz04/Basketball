@@ -16,14 +16,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function Button2(){
+export default function Button2(props){
 	const classes = useStyles();
 
 	return(
 		<div classname={classes.root} style={{float: 'right'}}>
             <ButtonGroup variant="text" color="inherit" aria-label="text primary button group">
-              <Button style={{float: 'right'}}>Latest Results</Button>
-              <Button style={{float: 'right'}}>Standings</Button>
+              <Button onClick={props.seeResults}>Latest Results</Button>
+              <Button onClick={props.seeTeams}>Teams</Button>
             </ButtonGroup>
         </div>
     )

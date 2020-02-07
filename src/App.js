@@ -7,27 +7,56 @@ import Games from './Games.js'
 import Button2 from './Button2'
 import Teams from './Teams'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-  }  
-}));
+// const useStyles = makeStyles(theme => ({
+//   root: {
+//   }  
+// }));
 
-export default function App() {
-  const classes = useStyles();
+class App extends React.Component {
+  // constructor 
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentTab:  'games'
+    }
+  }
+  seeTeams = () => {
+   // currentTab = 'teams'
+      this.setState({
+        currentTab: 'teams' 
+      })
+    // setState
+  }
+  seeResults = () => {
+    this.setState({
+      currentTab: 'games'
+    })
+  }
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
-            NBA
-          </Typography>
-          <Button2 />
-        </Toolbar>
-      </AppBar>
-      <Teams />
-      <Games />
-    </div>
-  );
+  // seeResults
+
+  render() {
+    let currentTab
+    if (this.state.currentTab == 'teams') {
+      currentTab = (<Teams />)
+    } else if (this.state.currentTab == 'games') {
+      currentTab = (<Games />)
+    }
+
+    return ( // JSX
+      <div>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" noWrap>
+              NBA
+            </Typography>
+            <Button2 seeTeams={this.seeTeams} seeResults={this.seeResults}/>
+          </Toolbar>
+        </AppBar>
+        {currentTab}
+      </div>
+    );
+  }
 }
 
+export default App
