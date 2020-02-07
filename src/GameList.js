@@ -38,14 +38,6 @@ export default function GameList(props) {
       <div className={classes.root}>
         <Paper className={classes.paper}>
           <Grid container spacing={2}>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item className={classes.image}>
-                  <img className={classes.img} alt="logo1" src="./images/LogoLAL.png" />
-              </Grid>
-              <Grid item className={classes.image}>
-                  <img className={classes.img} alt="logo2" src="/static/images/grid/logo2.jpg" />
-              </Grid>
-            </Grid>
             <Grid item xs={12} sm container>
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
