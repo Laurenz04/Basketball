@@ -4,22 +4,10 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import GameList from './GameList'
 
-const fakeData = {
-  games: [
-    {
-      teams: [
-        {name: 'Lakers', score: 1},
-        {name: 'Clippers', score: 115} 
-      ]
-    },
-    {
-      teams: [
-        {name: 'Bucks', score: 1},
-        {name: '79ers', score: 115} 
-      ]
-    }
-  ]
-}
+import { BallDontLie } from '@jharrilim/balldontlie-client';
+
+const games = []
+const api = BallDontLie.v1()
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -29,13 +17,35 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Games() {
-  const classes = useStyles();
+class Games extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      games: []
+    }
+  }
 
-  return (
-    <div>
-      <Paper className={classes.paper}>Latest Results</Paper>
-      <GameList games={fakeData.games}/>
-    </div>
-  );
+  componentWillMount() {
+    const gamesGenerator = api.games(0,3)
+    gamesGenerator.next().then(response => {
+      this.setState({
+        ...this.state,
+        games: response.value
+      })
+    })
+  }
+
+  render() {
+    //const classes = useStyles();
+    // className={classes.paper}
+
+    return (
+      <div>
+        <Paper>Latest Results</Paper>
+        <GameList games={this.state.games}/>
+      </div>
+    );
+  }
 }
+
+export default Games
