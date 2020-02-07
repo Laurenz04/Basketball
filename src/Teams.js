@@ -24,7 +24,7 @@ class Teams extends React.Component {
   }
 
   componentWillMount() {
-    const teamsGenerator = api.teams(0,3)
+    const teamsGenerator = api.teams(0,30)
     teamsGenerator.next().then(response => {
       this.setState({
         ...this.state,
